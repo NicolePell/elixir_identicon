@@ -7,9 +7,8 @@ defmodule Identicon do
   end
 
   def pick_color(image) do
-    %Identicon.Image{hex: hex_list} = image
-    [red, green, blue | _tail] = hex_list
-    [red, green, blue]
+    %Identicon.Image{hex: [r, g, b | _tail]} = image
+    [r, g, b]
   end
 
   def hash_input(input) do
